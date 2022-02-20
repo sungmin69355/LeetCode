@@ -1,5 +1,5 @@
 ## Index
- + LeetCode 코딩 공부 저장소입니다.
+ + LeetCode로 코딩테스트 스터디를 진행중입니다.
  + [LeetHub](https://github.com/QasimWani/LeetHub) Plugin을 사용해서 각자의 저장소에 코드를 관리합니다.
  + 사용법 : [LeetCode와 Github 연동하기](https://blog.naver.com/adamdoha/222339579487)
  
