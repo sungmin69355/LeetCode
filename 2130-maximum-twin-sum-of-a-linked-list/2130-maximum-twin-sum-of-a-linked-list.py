@@ -14,9 +14,7 @@ class Solution:
         n, max_sum = len(res), 0
     
         k = []
-        j = []
         for i in range(n):
             k.append(res[i] + res[n-1-i])
         
-        print(k)
         return max(k)
