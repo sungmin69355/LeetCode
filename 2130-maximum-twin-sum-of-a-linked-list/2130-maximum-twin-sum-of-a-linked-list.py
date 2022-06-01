@@ -13,7 +13,10 @@ class Solution:
         
         n, max_sum = len(res), 0
     
+        k = []
+        j = []
         for i in range(n):
-            max_sum = max(max_sum, res[i] + res[n-1-i])
+            k.append(res[i] + res[n-1-i])
         
-        return max_sum
+        print(k)
+        return max(k)
