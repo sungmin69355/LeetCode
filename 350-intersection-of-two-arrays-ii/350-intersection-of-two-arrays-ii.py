@@ -1,10 +1,6 @@
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        
-        result = []
-        for i in nums1:
-            if i in nums2:
-                nums2.remove(i)
-                result.append(i)
-        
-        return result
+        num1 = collections.Counter(nums1)
+        num2 = collections.Counter(nums2)
+        num = num1 & num2
+        return num.elements()
