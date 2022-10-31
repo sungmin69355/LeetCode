@@ -4,11 +4,11 @@ class Solution:
         
         for i in nums: 
             if i < pivot:
-                r.append(i)
+                l.append(i)
             elif i ==  pivot:
                 pi.append(i)
             else:
-                l.append(i)
+                r.append(i)
                 
-        return r+pi+l
+        return l+pi+r
                 
