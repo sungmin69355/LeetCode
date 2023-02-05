@@ -1,7 +1,14 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
        
-        for i,v in enumerate(s):
-            if s.count(v) == 1:
-                return i
+        if len(s) == 1:
+            return 0
+        
+        letter = 'qwertyuiopasdfghjklzxcvbnm'
+        result = []
+        for i in letter:
+            if s.count(i) == 1:
+                result.append(s.index(i))
+        if len(result) > 0:
+            return min(result)
         return -1
