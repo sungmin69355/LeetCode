@@ -1,19 +1,21 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
+        r = len(nums)-1
+        l = 0
+        
         if len(nums) == 0:
             return [-1,-1]
         
-        left, right = 0, len(nums)-1
-        while (left < right and right > left):
-            if nums[left] != target:
-                left += 1
-            if nums[right] != target:
-                right -= 1
+        while l < r and r > l:
+            if nums[l] != target:
+                l+=1
+            if nums[r] != target:
+                r-=1
+            if nums[l] == target and nums[r] == target:
+                return [l,r]
             
-            if nums[left] == target and nums[right] == target:
-                return [left,right]
-            
-        if nums[left] != target or nums[right] != target:
+           
+        if nums[l] != target or nums[r] != target:
             return [-1,-1]
         else:
-            return [left,right]
+            return [l,r]
